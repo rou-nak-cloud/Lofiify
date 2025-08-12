@@ -50,5 +50,8 @@ Then open http://localhost:5173 in your browser.
 ```
 
 
-## 📂 Project Structure
+---
+
+| Made by Rounak Bakshi. |
+
 
