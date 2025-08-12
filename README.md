@@ -7,9 +7,10 @@ Designed for smooth playback, elegant UI, and a lo-fi vibe.
 
 ## 📸 Preview
 
-| Desktop View |
-|--------------|
-| ![Desktop Preview](./screenshots/desktop.png) |
+| Desktop View | Banner View |
+|--------------|-------------|
+| ![Desktop Preview](Client/screenshots/LofifyHome.png) | ![Desktop Preview](Client/screenshots/LofifyBanner.png) |
+
 
 ---
 
