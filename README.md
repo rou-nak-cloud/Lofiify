@@ -1,4 +1,4 @@
-# 🎵 Lofify — Spotify Clone
+# 🎵 Lofify — Spotify Clone [Backend is under progress]
 
 A modern, fully responsive **Spotify-inspired** music player built with **React.js** and **Tailwind CSS**.  
 Designed for smooth playback, elegant UI, and a lo-fi vibe.
