@@ -1,4 +1,4 @@
-import { addSongs,listSongs } from "../controllers/songsController.js";
+import { addSongs,listSongs, removeSong } from "../controllers/songsController.js";
 import express from 'express';
 import upload from "../middlewares/multer.js";
 
@@ -8,5 +8,6 @@ songRouter.post('/add', upload.fields([{name: 'image', maxCount:1}, {name: 'audi
 // .fields() is used when you need different types of files uploaded together (e.g., image + audio), each with its own field name.
 
 songRouter.get('/list', listSongs);
+songRouter.post('/remove', removeSong);
 
 export default songRouter;

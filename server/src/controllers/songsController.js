@@ -3,8 +3,8 @@ import { SongsModel } from '../models/songModel.js';
 
 const addSongs = async (req,res)=> {
     try {
-         console.log("FILES:", req.files); // Check what Multer parsed
-        console.log("BODY:", req.body);   // Check text fields
+        //  console.log("FILES:", req.files); // Check what Multer parsed
+        // console.log("BODY:", req.body);   // Check text fields
 
         // const { name, desc, album,}  = req.body;
         const name = req.body.name;
@@ -61,4 +61,21 @@ const listSongs = async (req,res)=> {
     }
 }
 
-export { addSongs, listSongs }
+const removeSong = async (req,res)=> {
+    try {
+        await SongsModel.findByIdAndDelete(req.body.id)
+        res.status(201).json({
+            success: true,
+            message: "Song removed successfully",
+        })
+        
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: "Failed to remove song",
+            error: error.message
+        })
+    }
+}
+
+export { addSongs, listSongs, removeSong }
