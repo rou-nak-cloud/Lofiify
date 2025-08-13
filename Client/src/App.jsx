@@ -4,8 +4,18 @@ import MusicPlayer from "./components/MusicPlayer";
 import DisplayPlayer from "./components/DisplayPlayer";
 import { PlayerContext } from "./context/PlayerContext";
 
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import Admin from "./components/Admin";
+
 const App = () => {
   const { audioRef,track  } = useContext(PlayerContext)
+
+  const location = useLocation();
+  const isAdminPage = location.pathname === "/admin"
+  if(isAdminPage){
+    return <Admin />
+  }
+  
   return (
     <>
       <div className="h-screen bg-[#030712]">

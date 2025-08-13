@@ -22,7 +22,7 @@ const DisplayAlbum = () => {
             <h4 className=''>{albumData.desc}</h4>
             <p className='mt-1'>
                 <img className='inline-block w-5' src={assets.spotify_logo} alt="" />
-                <b> Lofiify</b>
+                <b> Lofify</b>
                 <li>1,323,154 likes</li>
                 <li><b>50 songs,</b></li>
                 about 2hr 30 min
