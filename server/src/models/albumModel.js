@@ -16,7 +16,7 @@ const albumSchema = new mongoose.Schema(
         },
         genre: {
             type: String,
-            required: true,
+            // required: true,
         },
         bgColor: {
             type: String,
