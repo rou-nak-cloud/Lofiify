@@ -18,6 +18,8 @@ import ListAlbums from "./pages/listAlbums";
 import DisplayAlbum from "./components/DisplayAlbum";
 import DisplayHome from "./components/DisplayHome";
 
+export const url = 'http://localhost:5009'
+
 
 // import ListSongs from "./pages/ListSongs";
 // import AddAlbum from "./pages/AddAlbum";
