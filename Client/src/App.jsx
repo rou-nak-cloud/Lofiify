@@ -17,7 +17,6 @@ import AddAlbum from "./pages/addAlbum";
 import ListAlbums from "./pages/listAlbums";
 import DisplayAlbum from "./components/DisplayAlbum";
 import DisplayHome from "./components/DisplayHome";
-import AdminHome from "./pages/AdminHome";
 
 
 // import ListSongs from "./pages/ListSongs";
@@ -68,7 +67,7 @@ const App = () => {
             <Route path="addSong" element={<AddSong />} />
             <Route path="listSong" element={<ListSongs />} />
             <Route path="addAlbum" element={<AddAlbum />} />
-            <Route path="listAlbums" element={<ListAlbums />} />
+            <Route path="listAlbum" element={<ListAlbums />} />
           </Route>
 
       </Routes>
