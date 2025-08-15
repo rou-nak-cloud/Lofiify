@@ -5,13 +5,16 @@ It includes both a **user-friendly music player** and an **admin panel** to mana
 Built with **React.js, Tailwind CSS** for the frontend and **Node.js, Express.js, MongoDB** for the backend.
 
 ---
-
+https://github.com/rou-nak-cloud/Lofiify/blob/main/Client/screenshots/AdminPanel.png
 ## 📸 Preview
 
 | Desktop View | Banner View |
 |--------------|-------------|
 | ![Desktop Preview](Client/screenshots/LofifyHome.png) | ![Desktop Preview](Client/screenshots/LofifyBanner.png) |
 
+| Admin Panel | List Song |
+|--------------|-------------|
+| ![Desktop Preview](Client/screenshots/AdminPanel.png) | ![Desktop Preview](Client/screenshots/ListSong.png) |
 
 ---
 
