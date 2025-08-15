@@ -9,7 +9,7 @@ const MusicPlayer = () => {
   return `${String(min).padStart(2, "0")}:${String(sec).padStart(2, "0")}`;
     };
 
-  return (
+  return track ? (
     <>
         <div className='bg-[#030712] flex items-center justify-between text-white/90 px-4 py-3'>
             <div className='hidden lg:flex items-center gap-4'>
@@ -55,7 +55,7 @@ const MusicPlayer = () => {
             </div>
         </div> 
     </>
-  )
+  ) : null
 }
 
 export default MusicPlayer

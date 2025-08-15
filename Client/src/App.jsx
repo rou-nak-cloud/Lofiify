@@ -2,14 +2,13 @@ import React, { useContext } from "react";
 import { PlayerContext } from "./context/PlayerContext";
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-import Admin from "./components/Admin";
+
 
 import UserLayout from "./layouts/UserLayout";
 import AdminLayout from "./layouts/AdminLayout";
 
 import DisplayPlayer from "./components/DisplayPlayer";
-import Sidebar from "./components/Sidebar";
-import MusicPlayer from "./components/MusicPlayer";
+
 
 import AddSong from "./pages/addSong";
 import ListSongs from "./pages/listSongs";
@@ -20,10 +19,6 @@ import DisplayHome from "./components/DisplayHome";
 
 export const url = 'http://localhost:5009'
 
-
-// import ListSongs from "./pages/ListSongs";
-// import AddAlbum from "./pages/AddAlbum";
-// import ListAlbums from "./pages/ListAlbums";
 
 const App = () => {
   // const { audioRef,track  } = useContext(PlayerContext)
@@ -49,7 +44,7 @@ const App = () => {
   //   </>
   // );
 
-   const { audioRef,track  } = useContext(PlayerContext)
+   const { audioRef,track,songsData } = useContext(PlayerContext)
   return (
     <>
       <Routes>
@@ -74,7 +69,7 @@ const App = () => {
 
       </Routes>
 
-      <audio ref={audioRef} preload="auto" src={track.file}></audio>
+      <audio ref={audioRef} preload="auto" src={track ? track.file : ""}></audio>
     </>
   )
 };

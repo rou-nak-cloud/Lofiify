@@ -17,7 +17,7 @@ const Navbar = () => {
             <img onClick={() => navigate(1)} className='w-8 bg-black p-2 rounded-2xl cursor-pointer' src={assets.arrow_right} alt="right" />
         </div>
         <div className='flex items-center gap-4'>
-          <button onClick={goToAdmin} className='bg-[#111827] text-white/80 text-[15px] px-4 py-2 rounded-2xl hidden md:block cursor-pointer hover:bg-white/10 transition-colors'>Admin
+          <button onClick={goToAdmin} className='bg-[#14532d] text-white/80 text-[15px] px-4 py-2 rounded-2xl hidden md:block cursor-pointer hover:bg-white/10 transition-colors'>Admin
             </button>
             <button className='bg-white/90 text-black text-[15px] px-4 py-2 rounded-2xl hidden md:block cursor-pointer hover:bg-white/70 transition-colors'>Explore Premium
             </button>

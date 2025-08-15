@@ -1,13 +1,14 @@
 import React from 'react'
 import { assets } from '../fullAssets/assets/admin-assets/assets'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 const adminSidebar = () => {
+  const navigate = useNavigate();
   return (
     <>
      <div className='bg-[#1e293b] min-h-screen pl-[4vw] pr-5'>
-        <img src={assets.logo} className='mt-5 w-[max(10vw,80px)] hidden sm:block' alt="logo" />
-        <img src={assets.logo_small} className='mt-5 w-[max(5vw,40px)] sm:hidden block' alt="logo" />
+        <img onClick={()=>navigate('/')} src={assets.logo} className='mt-5 w-[max(10vw,80px)] hidden sm:block' alt="logo" />
+        <img onClick={()=>navigate('/')} src={assets.logo_small} className='mt-5 w-[max(5vw,40px)] sm:hidden block' alt="logo" />
 
         <div className='flex flex-col gap-5 mt-10'>
           {/* relative path means no '/' */}
