@@ -1,17 +1,25 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import { useParams } from 'react-router-dom'
-import { albumsData, assets, songsData } from '../assets/assets';
+import {  assets } from '../assets/assets';
 import { PlayerContext } from '../context/PlayerContext';
 
-const DisplayAlbum = () => {
+const DisplayAlbum = ({album}) => {
     const {id} = useParams();
-    const albumData = albumsData[id]
+    // const albumData = albumsData[id]
     // console.log(albumData);
+    const [albumData, setAlbumData ] = useState("")
+    const { playWithId,albumsData, songsData } = useContext(PlayerContext);
 
-    const { playWithId } = useContext(PlayerContext);
+    useEffect(()=>{
+        albumsData.map((item)=> {
+            if(item._id === id){
+                setAlbumData(item)
+            }
+        })
+    },[])
     
-  return (
+  return albumData ? (
     <>
     <Navbar />
      <div className='mt-10 gap-8 flex flex-col md:flex-row md:items-end'>
@@ -38,8 +46,8 @@ const DisplayAlbum = () => {
      </div>
      <hr className='opacity-50' />
      {
-        songsData.map((item,idx) => (
-            <div onClick={()=>playWithId(item.id)} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 mt-0.5 items-center text-[#71717a] hover:bg-[#1f2937] transition-colors cursor-pointer'>
+        songsData.filter((item)=>item.album === album.name).map((item,idx) => (
+            <div onClick={()=>playWithId(item._id)} className='grid grid-cols-3 sm:grid-cols-4 gap-2 p-2 mt-0.5 items-center text-[#71717a] hover:bg-[#1f2937] transition-colors cursor-pointer'>
                 <p className='text-white'>
                     <b className='mr-4 text-[#71717a]'>{idx+1}</b>
                     <img className='inline w-10 mr-5' src={item.image} alt="" />
@@ -58,7 +66,7 @@ const DisplayAlbum = () => {
         ))
      }
     </>
-  )
+  ) : null
 }
 
 export default DisplayAlbum

@@ -17,6 +17,7 @@ import ListAlbums from "./pages/listAlbums";
 import DisplayAlbum from "./components/DisplayAlbum";
 import DisplayHome from "./components/DisplayHome";
 
+
 export const url = 'http://localhost:5009'
 
 
@@ -44,7 +45,7 @@ const App = () => {
   //   </>
   // );
 
-   const { audioRef,track,songsData } = useContext(PlayerContext)
+   const { audioRef,track,songsData,albumsData,albumId } = useContext(PlayerContext)
   return (
     <>
       <Routes>
@@ -54,7 +55,7 @@ const App = () => {
           {/* displayPlayer is also a parent layout for rendering both displayHome and displayAlbum as a outlet */}
             <Route element={ <DisplayPlayer /> }>
                <Route path='/' element={<DisplayHome />} />
-               <Route path='album/:id' element={<DisplayAlbum />} />
+               <Route path='album/:id' element={<DisplayAlbum album={albumsData.find((x)=>(x._id == albumId))} />} />
             </Route>
          </Route>
 
