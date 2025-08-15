@@ -5,7 +5,7 @@ It includes both a **user-friendly music player** and an **admin panel** to mana
 Built with **React.js, Tailwind CSS** for the frontend and **Node.js, Express.js, MongoDB** for the backend.
 
 ---
-https://github.com/rou-nak-cloud/Lofiify/blob/main/Client/screenshots/AdminPanel.png
+
 ## 📸 Preview
 
 | Desktop View | Banner View |
