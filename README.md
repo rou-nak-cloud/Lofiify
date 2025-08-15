@@ -1,7 +1,8 @@
-# 🎵 Lofify — Spotify Clone [Backend is under progress]
+## 🎵 Lofify — Spotify Clone 
 
-A modern, fully responsive **Spotify-inspired** music player built with **React.js** and **Tailwind CSS**.  
-Designed for smooth playback, elegant UI, and a lo-fi vibe.
+Lofify is a **full-stack music streaming application** inspired by Spotify.  
+It includes both a **user-friendly music player** and an **admin panel** to manage songs and albums.  
+Built with **React.js, Tailwind CSS** for the frontend and **Node.js, Express.js, MongoDB** for the backend.
 
 ---
 
@@ -14,26 +15,20 @@ Designed for smooth playback, elegant UI, and a lo-fi vibe.
 
 ---
 
-## ✨ Features
+## 🚀 Features
 
-- 🎶 **Play & Pause** — Full audio control for tracks.
-- 📱 **Fully Responsive** — Optimized for mobile, tablet, and desktop.
-- 🎨 **Tailwind Styled** — Fast and modern styling with Tailwind CSS.
-- 🔄 **Dynamic Track Rendering** — Playlist is rendered from an array.
-- ⏱ **Live Time Update** — Shows current track progress.
-- ⚡ **Fast UI** — Built with React’s component-based architecture.
+### **🎧 User Side**
+- Play songs with a sleek **Spotify-like UI**
+- View featured charts & playlists
+- Browse and play from available albums
+- Responsive music player with **play/pause/next/previous**
+- Fully responsive design for desktop & mobile
 
----
-
-## 🛠 Tech Stack
-
-- **React.js** — Frontend framework
-- **Tailwind CSS** — Styling
-- **Vite** — Development build tool
-- **JavaScript (ES6)** — Logic and functionality
-
----
-
+### **🛠 Admin Side**
+- Add new **songs** with details (title, artist, album, cover image, audio file)
+- Add new **albums** with cover image and description
+- List and manage songs/albums in an intuitive dashboard
+- Upload files directly (images & audio)
 
 ---
 
@@ -50,9 +45,18 @@ npm run dev
 Then open http://localhost:5173 in your browser.
 ```
 
+##.env File
+```
+PORT=5000
+MONGO_URI=your_mongodb_connection_string
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 
+VITE_BACKEND_URL=http://localhost:5000
 ---
+```
 
-| Made by Rounak Bakshi. |
+| Made by Rounak Bakshi 💙 |
 
 
